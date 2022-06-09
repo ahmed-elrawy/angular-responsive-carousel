@@ -1,0 +1,41 @@
+
+
+<div class="all">
+
+  
+  
+  <carousel 
+   [autoplay]="true"
+   [loop]="true" 
+   [width]="1100" 
+   [cellWidth]="400" 
+   [lightDOM]="true" 
+   [dots]="true"
+   [counter]="true"
+   [arrowsOutside]="true"
+   >
+    <div class="carousel-cell" *ngFor="let img of images">
+    <img [src]="img.path" >
+    </div>
+  </carousel>
+  
+  
+  <carousel 
+   [autoplay]="true"
+   [loop]="true" 
+   [cellsToShow]="1" 
+   [arrows]="false"
+   [height]="500"
+   [dots]="true"
+   [autoplayInterval]="2000"
+   [minSwipeDistance]="20"
+   [transitionDuration]="500"
+   [borderRadius]="10"
+
+   >
+    <div class="img-fit" class="carousel-cell" *ngFor="let img of images">
+    <img [src]="img.path" class="img-fit" >
+    </div>
+  </carousel>
+</div>
+
